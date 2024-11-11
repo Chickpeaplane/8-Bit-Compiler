@@ -2,3 +2,4 @@ DirectoryIndex index.html
 
 RewriteEngine On
 RewriteRule ^docs$ /docs.html
+RewriteRule ^examples$ /examples.html
