@@ -46,22 +46,3 @@ p {
 	color: white;
 	border-radius: 4px;
 }
-
-.docheader {
-	margin: 0px;
-}
-
-.dochint {
-	font-size: 20px;
-	margin: 0px;
-	color: #A0A0A0;	
-}
-
-.doccontent {
-	margin: 0px;
-}
-
-.docentry {
-	padding-left: 11%;
-	padding-right: 11%;
-}
