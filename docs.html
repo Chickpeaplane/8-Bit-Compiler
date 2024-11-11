@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>8 Bit Compiler</title>
+		<link rel="stylesheet" href="Style/docs.css">
+		<link rel="shortcut icon" href="Image/Icons/favicon.ico" type="image/x-icon">
+	</head>
+
+	<body>
+		<header id="header">
+			<h1 class="title">8 Bit Compiler</h1>
+			<h2 class="subtitle">Docs</h2>
+		</header>
+		
+		<div id="nop" class="docentry">
+			<h2 class="docheader">NOP</h2>
+			<p class="dochint">Argument: None, Modifies: None</p>
+			<p class="doccontent">No operation. Does nothing, and waits one instruction cycle, typically five clock cycles.</p>
+			<hr>
+		</div>
+	
+		<div id="jmp" class="docentry">
+			<h2 class="docheader">JMP</h2>
+			<p class="dochint">Argument: Address, Modifies: Memory</p>
+			<p class="doccontent">Jump. Jumps to the given address.</p>
+			<hr>
+		</div>
+
+		<div id="add" class="docentry">
+			<h2 class="docheader">ADD</h2>
+			<p class="dochint">Argument: Address, Modifies: Memory</p>
+			<p class="doccontent">Add. Adds the current values of the A register and B register and writes it to the given address.</p>
+			<hr>
+		</div>
+
+		<div id="sub" class="docentry">
+			<h2 class="docheader">SUB</h2>
+			<p class="dochint">Argument: Address, Modifies: Memory</p>
+			<p class="doccontent">Subtract. Subtracts the current values of the B register from the A register and writes it to the given address.</p>
+			<hr>
+		</div>
+
+		<div id="sta" class="docentry">
+			<h2 class="docheader">STA</h2>
+			<p class="dochint">Argument: Address, Modifies: Memory</p>
+			<p class="doccontent">Store A. Stores the current value of the A register to the given address.</p>
+			<hr>
+		</div>
+
+		<div id="atb" class="docentry">
+			<h2 class="docheader">ATB</h2>
+			<p class="dochint">Argument: None, Modifies: B Register</p>
+			<p class="doccontent">A to B. Moves the content of the A register to the B register.</p>
+			<hr>
+		</div>
+
+		<div id="ada" class="docentry">
+			<h2 class="docheader">ADA</h2>
+			<p class="dochint">Argument: None, Modifies: A Register</p>
+			<p class="doccontent">Add to A. Adds the current value of the A register to the current value of the B register and stores it to the A register.</p>
+			<hr>
+		</div>
+
+		<div id="adb" class="docentry">
+			<h2 class="docheader">ADB</h2>
+			<p class="dochint">Argument: None, Modifies: B Register</p>
+			<p class="doccontent">Add to B. Adds the current value of the A register to the current value of the B register and stores it to the B register.</p>
+			<hr>
+		</div>
+
+		<div id="lda" class="docentry">
+			<h2 class="docheader">LDA</h2>
+			<p class="dochint">Argument: Address, Modifies: A Register</p>
+			<p class="doccontent">Load to A. WritesLoads the value at the given address to the the A register.</p>
+			<hr>
+		</div>
+
+		<div id="ldb" class="docentry">
+			<h2 class="docheader">LDB</h2>
+			<p class="dochint">Argument: Address, Modifies: B Register</p>
+			<p class="doccontent">Load to B. Writes the value at the given address to the the B register.</p>
+			<hr>
+		</div>
+
+		<div id="lia" class="docentry">
+			<h2 class="docheader">LIA</h2>
+			<p class="dochint">Argument: Value, Modifies: A Register</p>
+			<p class="doccontent">Load Immediately to A. Loads the given value to the the A register.</p>
+			<hr>
+		</div>
+
+		<div id="lib" class="docentry">
+			<h2 class="docheader">LIB</h2>
+			<p class="dochint">Argument: Value, Modifies: B Register</p>
+			<p class="doccontent">Load Immediately to B. Loads the given value to the the B register.</p>
+			<hr>
+		</div>
+
+		<div id="jz" class="docentry">
+			<h2 class="docheader">JZ</h2>
+			<p class="dochint">Argument: Address, Modifies: None</p>
+			<p class="doccontent">Jump Zero. Jumps to the given address if the zero flag is set.</p>
+			<hr>
+		</div>
+
+		<div id="jc" class="docentry">
+			<h2 class="docheader">JC</h2>
+			<p class="dochint">Argument: Address, Modifies: None</p>
+			<p class="doccontent">Jump Carry. Jumps to the given address if the carry flag is set.</p>
+			<hr>
+		</div>
+
+		<div id="out" class="docentry">
+			<h2 class="docheader">OUT</h2>
+			<p class="dochint">Argument: Address, Modifies: Ouput</p>
+			<p class="doccontent">Output. Writes the value at the given address to the output register.</p>
+			<hr>
+		</div>
+
+		<div id="hlt" class="docentry">
+			<h2 class="docheader">HLT</h2>
+			<p class="dochint">Argument: None, Modifies: None</p>
+			<p class="doccontent">Halt. Halts the processor and stops all execution.</p>
+			<hr>
+		</div>																	
+	</body>
+</html>

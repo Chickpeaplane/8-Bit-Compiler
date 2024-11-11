@@ -1,0 +1,46 @@
+body {
+   background-color: #202020;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+	color: #FFFFFF;
+	font-family: Consolas, Monaco, monospace;
+}
+
+h1 {
+	font-size: 45px;
+}
+
+h2 {
+	font-size: 30px;
+}
+
+p {
+	font-size: 23px;
+}
+
+.title {
+	margin: 0px;
+}
+.subtitle {
+	margin-top: 0px;
+}
+
+.docheader {
+	margin: 0px;
+}
+
+.dochint {
+	font-size: 20px;
+	margin: 0px;
+	color: #A0A0A0;	
+}
+
+.doccontent {
+	margin: 0px;
+}
+
+.docentry {
+	padding-left: 11%;
+	padding-right: 11%;
+}
