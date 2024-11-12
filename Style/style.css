@@ -34,6 +34,12 @@ a {
 	align-items: center;
 }
 
+#headerbottomrow {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
 .title {
 	margin: 0px;
 }
