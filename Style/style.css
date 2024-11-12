@@ -7,7 +7,7 @@ body {
 	background: #484848;
 }
 
-h1, h2, h3, h4, h5, h6, p, a {
+h1, h2, h3, h4, h5, h6, p, a, tr, td {
 	color: #FFFFFF;
 	font-family: Consolas, Monaco, monospace;
 }
@@ -58,4 +58,13 @@ a {
 
 .navbutton:hover {
 	transform: scale(1.1);
+}
+
+code {
+	font-family: Consolas, "courier new";
+	color: crimson;
+	background-color: #383838;
+	padding: 2px;
+	font-size: 105%;
+	border-radius: 4px;
 }

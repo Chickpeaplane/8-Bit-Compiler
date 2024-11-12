@@ -1,0 +1,43 @@
+#compilearea {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	gap: 10px;
+	flex-wrap: wrap;
+}
+
+textarea {
+	font-family: Consolas, Monaco, monospace;
+	color: #EEEEEE;
+	background-color: #383838;
+	padding: 2px;
+	border-radius: 4px;
+	resize: none;
+	margin: 10px 100px;
+	width: 30%;
+	height: 500px;
+}
+
+#compilebutton {
+	height: 80px;
+}
+
+td, tr {
+	margin: 0px;
+	padding-inline: 5px;
+}
+
+table, tr, td {
+	border: 1px solid white;
+	border-collapse: collapse;
+}
+
+table {
+	color: #EEEEEE;
+	background-color: #383838;
+	padding: 2px;
+	resize: none;
+	margin: 10px 100px;
+	width: 40%;
+	height: 500px;
+}

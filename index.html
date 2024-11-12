@@ -19,5 +19,27 @@
             </div>
             <h2 class="subtitle">Compiler</h2>
         </header>
+
+        <div id="compilearea">
+            <textarea id="codeentry" autocomplete="false" spellcheck="false"></textarea>
+
+            <!-- <button id="compilebutton" type="button"><h2>Compile</h2></button> -->
+
+            <table id="outputtable">
+                <tdead>
+                    <tr>
+                        <td>Address</td>
+                        <td>Instruction</td>
+                        <td>Argument</td>
+                        <td>Hex Value</td>
+                        <td>Binary Value</td>
+                    </tr>
+                </tdead>
+                <tbody id="outputtablebody">
+                    <!-- tdis will be populated by Javascript. -->
+                </tbody>
+            </table>
+        </div>
+        <script src="Script/index.js"></script>
     </body>
 </html>
