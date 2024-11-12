@@ -16,10 +16,22 @@ textarea {
 	margin: 10px 100px;
 	width: 30%;
 	height: 500px;
+	margin: 0px;
 }
 
 #compilebutton {
-	height: 80px;
+	font-size: 25px;
+	padding: 5px 10px;
+	background-color: #383838;
+	color: white;
+	border-radius: 4px;
+	transition: 500ms;
+	border: none;
+	margin: 0px;
+}
+
+#compilebutton:hover {
+	transform: scale(1.1);
 }
 
 td, tr {
@@ -40,4 +52,5 @@ table {
 	margin: 10px 100px;
 	width: 40%;
 	height: 500px;
+	margin: 0px;
 }

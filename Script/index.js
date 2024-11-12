@@ -28,4 +28,8 @@ function tableCreate() {
     }
 }
 
+function compile() {
+    console.log("Compiling...");
+}
+
 tableCreate();
