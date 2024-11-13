@@ -32,6 +32,25 @@ function populate_table(program) {
     }
 }
 
+const textarea = document.getElementById('codeentry');
+
+textarea.addEventListener('keydown', function (e) {
+    if (e.key === 'Tab') {
+        e.preventDefault();
+
+        // Get the current cursor position
+        const start = textarea.selectionStart;
+        const end = textarea.selectionEnd;
+
+        // Insert a tab at the cursor position (using '\t')
+        const value = textarea.value;
+        textarea.value = value.substring(0, start) + '\t' + value.substring(end);
+
+        // Move the cursor position after the inserted tab character
+        textarea.selectionStart = textarea.selectionEnd = start + 1;
+    }
+});
+
 const commands = {
     "NOP": { value: 0,  args: false, addr: false },
     "JMP": { value: 1,  args: true,  addr: true  },
