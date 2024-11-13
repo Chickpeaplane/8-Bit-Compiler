@@ -357,5 +357,56 @@ function compile() {
     }
 }
 
+// Callback for the upload button
+function upload() {
+    // Press the hidden "fileupload" button
+    document.getElementById('fileupload').click();
+}
+
+// Callback for the fileupload button
+function fileChosen() {
+    // Get the file
+    let file = document.getElementById('fileupload').files[0];
+
+    // Has one been chosen?
+    if (file) {
+        // Create the file reader
+        let reader = new FileReader();
+        // Once it has read the file...
+        reader.onload = function (event) {
+            // Get the result and write it to the codeentry
+            let contents = event.target.result;
+            document.getElementById("codeentry").value = contents;
+        }
+        // Start reading
+        reader.readAsText(file);
+    }
+}
+
+
+// Callback for the download button
+function download() {
+    // Get the content of the codeentry
+    const program = document.getElementById('codeentry').value;
+
+    // Create a Blob containing the program in plaintext
+    const blob = new Blob([program], { type: 'text/plain' });
+
+    // Create an anchor element to trigger the download
+    const link = document.createElement('a');
+
+    // Set the download attribute to specify the filename
+    link.download = 'program.8bit';
+
+    // Create a URL for the Blob
+    link.href = URL.createObjectURL(blob);
+
+    // Programmatically click the link to trigger the download
+    link.click();
+
+    // Revoke the URL after use
+    URL.revokeObjectURL(link.href);
+}
+
 // Initialise the table with the empty program
 populate_table(compiled_program)

@@ -26,8 +26,6 @@
         <div id="compilearea">
             <textarea id="codeentry" autocomplete="false" spellcheck="false"></textarea>
 
-            <button id="compilebutton" type="button" onclick="compile()"><h2>Compile</h2></button>
-
             <table id="outputtable">
                 <thead>
                     <tr>
@@ -43,6 +41,14 @@
                 </tbody>
             </table>
         </div>
+
+        <div id="controlbar">
+            <input type="image" src="Image/upload.png" alt="Upload" onclick="upload()">
+            <input id='fileupload' type='file' accept=".8bit" onchange="fileChosen()" hidden>
+            <input type="image" src="Image/play.png" alt="Compile" onclick="compile()">
+            <input type="image" src="Image/download.png" alt="Download" onclick="download()">
+        </div>
+
         <script src="Script/index.js"></script>
     </body>
 </html>

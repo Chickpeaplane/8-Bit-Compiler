@@ -54,3 +54,21 @@ table {
 	height: 500px;
 	margin: 0px;
 }
+
+#controlbar {
+	width: 100vw;
+	height: 50px;
+	background: #383838;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 10;
+}
+
+#controlbar input[type="image"] {
+	height: 30px;
+	padding: 10px;
+}
