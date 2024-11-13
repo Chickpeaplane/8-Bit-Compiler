@@ -66,11 +66,12 @@ a {
 	transform: scale(1.1);
 }
 
-code {
+.codestyle {
 	font-family: Consolas, "courier new";
-	color: crimson;
+	color: white;
 	background-color: #383838;
 	padding: 2px;
 	font-size: 105%;
+	resize: none;
 	border-radius: 4px;
 }
