@@ -32,24 +32,46 @@ function populate_table(program) {
     }
 }
 
-const textarea = document.getElementById('codeentry');
+function insert_tab(event) {
+    const isShift = event.shiftKey;
 
-textarea.addEventListener('keydown', function (e) {
-    if (e.key === 'Tab') {
-        e.preventDefault();
+    if (event.key === 'Tab') {
+        event.preventDefault();
 
-        // Get the current cursor position
         const start = textarea.selectionStart;
         const end = textarea.selectionEnd;
+        const value = textarea.value
 
-        // Insert a tab at the cursor position (using '\t')
-        const value = textarea.value;
-        textarea.value = value.substring(0, start) + '\t' + value.substring(end);
+        if (start === end) {
+            textarea.value = value.substring(0, start) + '\t' + value.substring(end);
+            textarea.selectionStart = textarea.selectionEnd = start + 1;
+            return;
+        }
 
-        // Move the cursor position after the inserted tab character
-        textarea.selectionStart = textarea.selectionEnd = start + 1;
+        let selectedText = value.substring(start, end);
+        let lines = selectedText.split(/\r?\n/);
+
+        if (isShift) {
+            for (let i = 0; i < lines.length; i++) {
+                if (lines[i].startsWith('\t')) {
+                    lines[i] = lines[i].substring(1);  // Remove the tab
+                }
+            }
+        } else {
+            for (let i = 0; i < lines.length; i++) {
+                lines[i] = '\t' + lines[i];
+            }
+        }
+
+        selectedText = lines.join('\n');
+        textarea.value = value.substring(0, start) + selectedText + value.substring(end);
+        textarea.selectionStart = textarea.selectionEnd = start + selectedText.length;
     }
-});
+}
+
+const textarea = document.getElementById("codeentry");
+textarea.addEventListener('keydown', insert_tab);
+
 
 const commands = {
     "NOP": { value: 0,  args: false, addr: false },

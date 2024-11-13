@@ -1,4 +1,4 @@
-function transformScroll(event) {
+function scroll_horizontally(event) {
   if (!event.deltaY) {
     return;
   }
@@ -7,4 +7,4 @@ function transformScroll(event) {
   event.preventDefault();
 }
 
-document.getElementById("examplegallery").addEventListener('wheel', transformScroll);
+document.getElementById("examplegallery").addEventListener('wheel', scroll_horizontally);
