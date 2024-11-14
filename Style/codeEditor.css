@@ -1,0 +1,36 @@
+.code-editor {
+    font-family: Consolas, Monaco, monospace;
+    color: #EEEEEE;
+    background-color: #333333;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #444444;
+    width: 40%;
+    height: 525px;
+    overflow: auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    white-space: pre-wrap;
+    outline: none;
+}
+
+.code-editor .keyword {
+    color: #FFD700;
+    font-weight: bold;
+}
+
+.code-editor .number {
+    color: #477EFF;
+}
+
+.code-editor .pointer {
+    color: #fc2287;
+}
+
+.code-editor .comment {
+    color: #00B20F;
+    font-style: italic;
+}
+
+.code-editor .error {
+    background-color: #FF0000;
+}

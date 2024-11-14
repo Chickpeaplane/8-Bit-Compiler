@@ -40,7 +40,34 @@ header {
     flex-direction: column;
 }
 
-textarea {
+.codeBox {
+    font-family: Consolas, Monaco, monospace;
+    color: #EEEEEE;
+    background-color: #333333;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #444444;
+    overflow: auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    white-space: pre-wrap;
     width: 80%;
     height: 60%;
+}
+
+.codeBox .keyword {
+    color: #FFD700;
+    font-weight: bold;
+}
+
+.codeBox .number {
+    color: #477EFF;
+}
+
+.codeBox .pointer {
+    color: #fc2287;
+}
+
+.codeBox .comment {
+    color: #00B20F;
+    font-style: italic;
 }

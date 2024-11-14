@@ -6,6 +6,7 @@
         <title>8 Bit Compiler</title>
         <link rel="stylesheet" href="Style/style.css">
         <link rel="stylesheet" href="Style/index.css">
+        <link rel="stylesheet" href="Style/codeEditor.css">
         <link rel="shortcut icon" href="Image/Icons/favicon.ico" type="image/x-icon">
     </head>
 
@@ -19,12 +20,12 @@
                 </div>
             </div>
             <div id="headerbottomrow">
-                <h2 class="subtitle">Compiler</h2>
             </div>
         </header>
 
         <div id="compilearea">
-            <textarea id="codeentry" autocomplete="false" spellcheck="false"></textarea>
+
+            <div id="codeentry" contenteditable="true" class="code-editor"></div>
 
             <table id="outputtable">
                 <thead>
@@ -50,5 +51,7 @@
         </div>
 
         <script src="Script/index.js"></script>
+        <script src="Script/syntax.js"></script>
+        <script src="Script/codeEditor.js"></script>
     </body>
 </html>

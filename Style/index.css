@@ -1,58 +1,61 @@
 #compilearea {
 	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
-	gap: 10px;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 20px;
 	flex-wrap: wrap;
+	margin-bottom: 70px;
+	margin-top: 40px;
 }
 
 textarea {
 	font-family: Consolas, Monaco, monospace;
 	color: #EEEEEE;
-	background-color: #383838;
-	padding: 2px;
-	border-radius: 4px;
+	background-color: #333333;
+	padding: 12px;
+	border-radius: 8px;
+	border: 1px solid #444444;
 	resize: none;
-	margin: 10px 100px;
-	width: 30%;
-	height: 500px;
-	margin: 0px;
+	width: 40%;
+	height: 525px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+	transition: all 200ms ease-in-out;
 }
 
-#compilebutton {
-	font-size: 25px;
-	padding: 0px 10px;
-	background-color: #383838;
-	color: white;
-	border-radius: 4px;
-	transition: 500ms;
-	border: none;
-	margin: 0px;
-}
-
-#compilebutton:hover {
-	transform: scale(1.1);
-}
-
-td, tr {
-	margin: 0px;
-	padding-inline: 5px;
-}
-
-table, tr, td {
-	border: 1px solid white;
-	border-collapse: collapse;
+textarea:focus {
+	outline: none;
+	border-color: #FFFFFF;
+	box-shadow: 0 0 10px #FFFFFFB0;
 }
 
 table {
 	color: #EEEEEE;
-	background-color: #383838;
-	padding: 2px;
-	resize: none;
-	margin: 10px 100px;
+	background-color: #333333;
+	padding: 10px;
+	border-collapse: collapse;
 	width: 40%;
-	height: 500px;
-	margin: 0px;
+	max-height: 350px;
+	overflow-y: auto;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+table thead {
+	background-color: #444444;
+}
+
+th, td {
+	padding: 6px 12px;
+	text-align: left;
+	border-bottom: 1px solid #555555;
+}
+
+tr:hover {
+	background-color: #444444;
+}
+
+thead th {
+	font-weight: bold;
+	color: #FFD700;
 }
 
 #controlbar {
@@ -66,9 +69,16 @@ table {
 	bottom: 0;
 	left: 0;
 	z-index: 10;
+	border-top: 2px solid #444444;
 }
 
 #controlbar input[type="image"] {
 	height: 30px;
 	padding: 10px;
+	cursor: pointer;
+	transition: transform 500ms ease;
+}
+
+#controlbar input[type="image"]:hover {
+	transform: scale(1.1);
 }
