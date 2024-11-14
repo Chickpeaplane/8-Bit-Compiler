@@ -72,52 +72,65 @@ function highlight_code() {
     }
 }
 
-// Callback to insert or remove a tab (indent or unindent)
-function insert_tab(event) {
+// Callback to insert a tab or newline
+function insert_special(event) {
     const isShift = event.shiftKey;
 
-    if (event.key === 'Tab') {
-        event.preventDefault();  // Prevent the default Tab behavior
+    // For indent / unindent
+    if (event.key === "Tab") {
+        // Stop the default action
+        event.preventDefault();
 
-        // Get the current selection (cursor position)
+        // Get the current cursor position
         const selection = window.getSelection();
         const range = selection.getRangeAt(0);
         const cursorPosition = range.startContainer;
 
+        // Are we unindenting?
         if (isShift) {
-            // Handle Shift+Tab (un-indent)
             const text = cursorPosition.innerText;
 
-            // Check if there is a tab at the beginning of the line and remove it
-            if (text.startsWith('\t')) {
-                // Remove the leading tabs
+            // Is there a tab to unindent?
+            if (text.startsWith("\t")) {
+                // Remove it
                 cursorPosition.nodeValue = text.slice(1);
                 range.setStart(cursorPosition, 0);
                 range.setEnd(cursorPosition, 0);
             } else {
-                // No tab to remove, so don't do anything
+                // Nothing to unindent
                 return;
             }
         } else {
-            // Handle regular Tab (indent)
+            // Insert a tab
             const textNode = document.createTextNode("\t");
 
-            // Insert a tab character at the current cursor position
+            // Move the cursor back to where it was
             range.deleteContents();
             range.insertNode(textNode);
 
-            // Move the cursor after the inserted tab character
             range.setStartAfter(textNode);
             range.setEndAfter(textNode);
         }
 
-        // Update the selection to reflect the new cursor position
         selection.removeAllRanges();
         selection.addRange(range);
+
+    } else if (event.key === "Enter") {
+        event.preventDefault()
+        const selection = window.getSelection();
+        const range = selection.getRangeAt(0);
+
+        const textNode = document.createTextNode("\n");
+
+        range.deleteContents();
+        range.insertNode(textNode);
+
+        range.setStartAfter(textNode);
+        range.setEndAfter(textNode);
     }
 }
 
 // Add listeners to the codeEntry
 const codeEntry = document.getElementById("codeentry");
-codeEntry.addEventListener("keydown", insert_tab);
+codeEntry.addEventListener("keydown", insert_special);
 codeEntry.addEventListener("input", highlight_code);
