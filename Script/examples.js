@@ -18,7 +18,6 @@ document.getElementById("examplegallery").addEventListener('wheel', scroll_horiz
 function highlight_code(div) {
     // Get and highlight the text in the editor
     let code = div.innerText;
-    console.log(code);
 
     // Add the relevant spans
     code = code.replaceAll(/;.*(\r\n|\r|\n|$)/g, `<span class="comment">$&</span>`);

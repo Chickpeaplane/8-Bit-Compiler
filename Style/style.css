@@ -59,7 +59,7 @@ a {
 	background-color: #383838;
 	color: white;
 	border-radius: 4px;
-	transition: 500ms;
+	transition: 500ms ease;
 }
 
 .navbutton:hover {
