@@ -72,6 +72,17 @@ function highlight_code() {
     }
 }
 
+// Save to code to localStorage for persistance between sessions
+function cache_code() {
+    localStorage.setItem("program", codeEntry.innerText);
+}
+
+// Load the code from localStorage for persistance between sessions
+function load_code() {
+    codeEntry.innerText = localStorage.getItem("program");
+    highlight_code();
+}
+
 // Callback to insert a tab or newline
 function insert_special(event) {
     const isShift = event.shiftKey;
@@ -134,3 +145,5 @@ function insert_special(event) {
 const codeEntry = document.getElementById("codeentry");
 codeEntry.addEventListener("keydown", insert_special);
 codeEntry.addEventListener("input", highlight_code);
+codeEntry.addEventListener("input", cache_code);
+load_code();

@@ -1,5 +1,9 @@
 // Function to force all scroll events on the element to be horizontal
 function scroll_horizontally(event) {
+    // Is not it over the example gallery?
+    if (event.target.getAttribute("class") != "exampleblock" && event.target.getAttribute("class") != "exampleheader" && event.target.getAttribute("class") != "examplecontent") {
+        return;
+    }
     // There is already no vertical motion
     if (!event.deltaY) {
         return;

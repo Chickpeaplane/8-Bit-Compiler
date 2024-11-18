@@ -55,6 +55,7 @@ tr:hover {
 
 #controlbar input[type="image"]:hover {
 	transform: scale(1.1);
+	filter: invert(0.4);
 }
 
 @media (max-width: 1000px) {
@@ -66,10 +67,13 @@ tr:hover {
 	#outputtable {
 		width: calc(80% + 24px);
 	}
+
+	#compilearea {
+		margin-top: 30px;
+	}	
 }
 
-@media (max-width: 500px) {
-	body {background: #FF0000;}
+@media (max-width: 576px) {
 	#codeentry {
 		width: 100%;
 		height: 300px;
@@ -81,5 +85,9 @@ tr:hover {
 
 	th, td {
 		padding: 4px, 6px;
+	}
+
+	#compilearea {
+		margin-top: 20px;
 	}
 }

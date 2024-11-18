@@ -75,3 +75,31 @@ a {
 	resize: none;
 	border-radius: 4px;
 }
+
+@media (max-width: 576px) {
+	h1 {
+		font-size: 35px;
+	}
+
+	h2 {
+		font-size: 22px;
+	}
+
+	p {
+		font-size: 12px;
+	}
+}
+
+@media (max-width: 500px) {
+	h1 {
+		font-size: 25px;
+	}
+
+	h2 {
+		font-size: 12px;
+	}
+
+	p {
+		font-size: 6px;
+	}
+}

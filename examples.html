@@ -27,23 +27,23 @@
 		<div id="examplegallery">
 			<div class="examplecontent">
 				<div class="exampleblock">
-					<h2>Addition</h2>
+					<h2 class="exampleheader">Addition</h2>
 					<div class="codeBox">; Simple program to add two numbers&#13@in1: .value 2&#13@in2: .value 3&#13@out: .value 0&#13&#13LDA @in1&#13LDB @in2&#13ADD @out&#13OUT @out&#13HLT</div>
 				</div>
 				<div class="exampleblock">
-					<h2>Subtraction</h2>
+					<h2 class="exampleheader">Subtraction</h2>
 					<div class="codeBox">; Simple program to subtract two numbers&#13@in1: .value 5&#13@in2: .value 3&#13@out: .value 0&#13&#13LDA @in1&#13LDB @in2&#13SUB @out&#13OUT @out&#13HLT</div>
 				</div>
 				<div class="exampleblock">
-					<h2>Multiplication</h2>
+					<h2 class="exampleheader">Multiplication</h2>
 					<div class="codeBox">; Simple program to multiply two numbers&#13@in1: .value 3&#13@in2: .value 4&#13@out: .value 0&#13&#13@loop:&#13&#09LDA @in1&#13&#09LDB @in1&#13&#09ADD @out&#13&#09LDA @in2&#13&#09LIB 1&#13&#09SUB @in2&#13&#09JZ @done&#13&#09JMP @loop&#13&#13@done:&#13&#09OUT @out&#13&#09HLT</div>
 				</div>
 				<div class="exampleblock">
-					<h2>Division</h2>
+					<h2 class="exampleheader">Division</h2>
 					<div class="codeBox">; Simple program to divide two numbers&#13@in1: .value 12&#13@in2: .value 3&#13@out: .value 0&#13&#13@loop:&#13&#09LDA @out&#13&#09LIB 1&#13&#09ADD @out&#13&#09LDA @in1&#13&#09LDB @in2&#13&#09SUB @in1&#13&#09JZ @done&#13&#09JMP @loop&#13&#13@done:&#13&#09OUT @out&#13&#09HLT</div>
 				</div>
 				<div class="exampleblock">
-					<h2>Triangle Numbers</h2>
+					<h2 class="exampleheader">Triangle Numbers</h2>
 					<div class="codeBox">; Program that finds the nth triangle number&#13@in: .value 5&#13@out: .value 0&#13&#13@loop:&#13	LDA @in&#13	LDB @out&#13	ADD @out&#13	LIB 1&#13	SUB @in&#13	JZ @done&#13	JMP @loop&#13@done:&#13	OUT @out&#13	HLT</div>
 				</div>
 			</div>
