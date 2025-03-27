@@ -76,6 +76,15 @@ a {
 	border-radius: 4px;
 }
 
+.no-drag {
+	-webkit-user-drag: none;
+	user-drag: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
 @media (max-width: 576px) {
 	h1 {
 		font-size: 35px;
