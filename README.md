@@ -1,6 +1,7 @@
 # 8-Bit Compiler
 ## Overview
 This is a simple compiler that can convert custom assembly into raw bytecode for Ben Eater's 8-bit computers.
+> _Note: While this tool technically functions as an assembler rather than a traditional compiler, it is referred to here as a "compiler" for simplicity and naming preference._
 
 ## Instruction Set
 Full documentation can be found [here](https://chickpeaplane.github.io/8-Bit-Compiler/docs).
